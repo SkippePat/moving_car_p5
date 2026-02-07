@@ -56,6 +56,11 @@ function draw() {
   if (mouseIsPressed === true) {
     fill(220, 220, 220)
     circle(25, 25, 100);
+    fill(110,110,110)
+    circle(0,25,10)
+    circle(20,0,15)
+    circle(20,40,15)
+    circle(40,25,10)
   } else {
     fill("yellow")
     circle(25, 25, 100);
