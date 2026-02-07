@@ -10,12 +10,31 @@ function setup() {
 }
 
 function draw() {
+  
+  
   // ===== DRAW BACKGROUND =====
   // Sky (light blue)
-  background(135, 206, 235);
+  if (mouseIsPressed === true) {
+    background(25, 25, 112);
+  } else {
+    background(196, 234, 234);
+  }
 
   // ===== BEGIN BILLBOARD HERE =====
-  
+  //Sign
+  stroke("grey")
+  strokeWeight(10);
+  line(500,250,500,125)
+  noStroke()
+  fill("grey")
+  rect(300,50,400,100)
+  fill(0, 64, 128)
+  rect(310,60,380,80)
+  fill(255,255,255)
+  textSize(20)
+  textFont('Highway Gothic')
+  text("Life is like a one way road,",350,90)
+  text("it keeps moving forward.",450,120)
   // ===== END BILLBOARD HERE =====
 
   // ===== DRAW GRASS =====
@@ -33,6 +52,14 @@ function draw() {
     line(i, carY + 60, i + 20, carY + 60);
   }
   noStroke();
+  
+  if (mouseIsPressed === true) {
+    fill(220, 220, 220)
+    circle(25, 25, 100);
+  } else {
+    fill("yellow")
+    circle(25, 25, 100);
+  }
 
   // ===== DRAW CAR =====
   drawCar(carX, carY);
@@ -74,4 +101,10 @@ function drawCar(x, y) {
   // Headlight (yellow)
   fill(255, 255, 0);
   circle(x + 95, y + 15, 8);
+  if (mouseIsPressed === true) {
+    triangle(x + 95, y + 15,x + 180, y + 30,x + 180, y - 30,)
+  } else {
+    fill("yellow")
+    circle(25, 25, 100);
+  }
 }
