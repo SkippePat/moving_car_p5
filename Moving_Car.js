@@ -99,12 +99,12 @@ function drawCar(x, y) {
   circle(x + 75, y + 40, 10);
 
   // Headlight (yellow)
-  fill(255, 255, 0);
+  fill("white");
   circle(x + 95, y + 15, 8);
   if (mouseIsPressed === true) {
     triangle(x + 95, y + 15,x + 180, y + 30,x + 180, y - 30,)
   } else {
-    fill("yellow")
+    fill(255, 212, 55)
     circle(25, 25, 100);
   }
 }
